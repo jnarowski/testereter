@@ -1,0 +1,52 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ //= require foundation_and_overrides
+ //= require foundation-icons
+ *= require_tree .
+ */
+
+ .accountability-spreadsheet { 
+   border-bottom: 0px;
+  th { 
+    background: #0E6BC2;
+    color: #fff;
+    border-right: 1px solid #4097E9;
+    text-align: center;
+    &:last-child { border-right: 0px; }
+    &.today { background: #B6DCFF; }
+  }
+  td {
+    &.header { 
+      background: #ddd;
+      border-bottom: 1px solid #ccc; 
+    }    
+    &.cell {
+      padding: 0px;
+      text-align: center;
+      height: 52px;
+      background: #fff;
+      border-right: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;    
+      &.cell-pass { background: #FFFF19 }
+      &.cell-success { background: #00C510 }
+      &.cell-fail { background: #C70303 }      
+    }
+    &:last-child { border-right: 0px; }    
+    .button { margin-bottom: 0px; }    
+  }
+}
+
+.cell-actions {
+  border: 0px;
+  background: inherit;
+  margin-bottom: 0px;
+}

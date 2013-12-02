@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+    <%= stylesheet_link_tag    "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div id="header-region">
+      <nav class="top-bar" data-topbar>
+        <ul class="title-area">
+          <li class="name">
+            <h1><a href="#">Accountability</a></h1>
+          </li>
+        </ul>
+        <section class="top-bar-section">
+          <ul class="right">
+            <li class="divider"></li>
+            <li><a href="#">Goals</a></li>
+            <li class="divider"></li>
+            <li class="has-dropdown">
+              <a href="#">John Paul Narowski</a>
+              <ul class="dropdown">
+                <li><a href="#">Logout</a></li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+      </nav>        
+    </div>
+    <div id='main-region'>
+      <table class='accountability-spreadsheet' width="100%" cellspacing="0">
+        <thead>
+          <tr>
+            <th width="16%"></th>
+            <th width="12%" class='today'>SU</th>
+            <th width="12%">MO</th>
+            <th width="12%">TU</th>
+            <th width="12%">WE</th>
+            <th width="12%">TH</th>
+            <th width="12%">FR</th>
+            <th width="12%">SA</th>
+          </tr>
+        </thead>
+        <tr>
+          <td class='header' colspan='8'>
+            <h4>John Paul Narowski</h4>
+          </td>
+        </tr>
+        <tr>
+          <td class='cell'><strong>Meditate (2)</strong></td>
+          <td class='cell cell-success' style='text-align: center'>
+              <a href="#" style='display: inline-block; padding: 2px;'><i style='color: #fff; font-size: 1.6em;' class='foundicon-checkmark'></i></a>
+              <a href="#" style='display: inline-block; padding: 2px;'><i style='color: #fff; font-size: 1.6em;' class='foundicon-remove'></i></a>
+              <a href="#" style='display: inline-block; padding: 2px;'><i style='color: #fff; font-size: 1.6em;' class='foundicon-edit'></i></a>
+          </td>
+          <td class='cell cell-pass'>Power of Now</td>
+          <td class='cell cell-pass'></td>
+          <td class='cell cell-success'></td>
+          <td class='cell cell-success'></td>
+          <td class='cell cell-fail'></td>
+          <td class='cell'></td>
+        </tr>
+        <tr>
+          <td class='cell'><strong>Exercise (1)</strong></td>
+          <td class='cell cell-success'>Power of Now</td>
+          <td class='cell cell-success'></td>
+          <td class='cell cell-pass'></td>
+          <td class='cell cell-pass'></td>
+          <td class='cell cell-fail'></td>
+          <td class='cell cell-fail'></td>
+          <td class='cell'></td>
+        </tr>                 
+        <tr>
+          <td class='header' colspan='8'>
+            <a href="#" style='float: right;' class="button tiny radius round">Hide</a>
+            <h4>Helena Narowski</h4>
+          </td>
+        </tr>
+        <tr>
+          <td class='cell'><strong>Meditate (2)</strong></td>
+          <td class='cell cell-success' style='text-align: center; background: #0082CE'>
+            <a href="#" style='display: inline-block; padding: 2px;'><i style='color: #fff; font-size: 1.6em;' class='foundicon-checkmark'></i></a>
+            <a href="#" style='display: inline-block; padding: 2px;'><i style='color: #fff; font-size: 1.6em;' class='foundicon-remove'></i></a>
+            <a href="#" style='display: inline-block; padding: 2px;'><i style='color: #fff; font-size: 1.6em;' class='foundicon-edit'></i></a>
+          </td>
+          <td class='cell cell-pass'>Power of Now</td>
+          <td class='cell cell-pass'></td>
+          <td class='cell cell-success'></td>
+          <td class='cell cell-success'></td>
+          <td class='cell cell-fail'></td>
+          <td class='cell'></td>
+        </tr>
+        <tr>
+          <td class='cell'><strong>Exercise (1)</strong></td>
+          <td class='cell cell-success'>Power of Now</td>
+          <td class='cell cell-success'></td>
+          <td class='cell cell-pass'></td>
+          <td class='cell cell-pass'></td>
+          <td class='cell cell-fail'></td>
+          <td class='cell cell-fail'></td>
+          <td class='cell'></td>
+        </tr>              
+      </table>  
+    </div>
+    <div id='footer-region'>
+    </div>
+    <%= javascript_include_tag "application" %>
+  </body>
+</html>
